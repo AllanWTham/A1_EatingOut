@@ -39,8 +39,4 @@ tree -sh
 
 # 3) Re-run the pipeline (this will execute A1.ipynb via papermill)
 dvc repro
-
-# 5) View the executed notebook
-jupyter nbconvert --to html outputs/A1_executed.ipynb
-# open outputs/A1_executed.html in a browser
 ```
