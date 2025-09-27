@@ -1,0 +1,42 @@
+schema: '2.0'
+stages:
+  run_notebook:
+    cmd: papermill notebooks/A1.ipynb outputs/A1_executed.ipynb -p DATA_CSV 
+      data/zomato_df_final_data.csv -p MODEL_OUT outputs/logr_model.pkl
+    deps:
+    - path: data/zomato_df_final_data.csv
+      hash: md5
+      md5: 6bb696eac5889d15f134cee5ff09eb5d
+      size: 2690897
+      isexec: true
+    - path: notebooks/A1.ipynb
+      hash: md5
+      md5: aaa23456ca0d18cc967e207706b4b993
+      size: 3861600
+      isexec: true
+    outs:
+    - path: outputs/A1_executed.ipynb
+      hash: md5
+      md5: 27c33d030f527e246b30e45bf3b39de8
+      size: 3844667
+      isexec: true
+    - path: outputs/logr_model.pkl
+      hash: md5
+      md5: 6acc660e6e1c74bf7567892489ce6ff8
+      size: 1397839
+      isexec: true
+  export_html:
+    cmd: jupyter nbconvert --to html --output A1_executed.html --output-dir 
+      outputs outputs/A1_executed.ipynb
+    deps:
+    - path: outputs/A1_executed.ipynb
+      hash: md5
+      md5: 27c33d030f527e246b30e45bf3b39de8
+      size: 3844667
+      isexec: true
+    outs:
+    - path: outputs/A1_executed.html
+      hash: md5
+      md5: aa22bbac28fee3c094c0863005cba0b3
+      size: 4225913
+      isexec: true
