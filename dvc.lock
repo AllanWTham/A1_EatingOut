@@ -11,14 +11,14 @@ stages:
       isexec: true
     - path: notebooks/A1.ipynb
       hash: md5
-      md5: aaa23456ca0d18cc967e207706b4b993
-      size: 3861600
+      md5: 9516d58cc51c640ee484fdd81b76bf59
+      size: 3862805
       isexec: true
     outs:
     - path: outputs/A1_executed.ipynb
       hash: md5
-      md5: 27c33d030f527e246b30e45bf3b39de8
-      size: 3844667
+      md5: 415bf375aac0cdeaff4011b1039e59d2
+      size: 3845864
       isexec: true
     - path: outputs/logr_model.pkl
       hash: md5
@@ -31,12 +31,12 @@ stages:
     deps:
     - path: outputs/A1_executed.ipynb
       hash: md5
-      md5: 27c33d030f527e246b30e45bf3b39de8
-      size: 3844667
+      md5: 415bf375aac0cdeaff4011b1039e59d2
+      size: 3845864
       isexec: true
     outs:
     - path: outputs/A1_executed.html
       hash: md5
-      md5: aa22bbac28fee3c094c0863005cba0b3
-      size: 4225913
+      md5: 41c7b137d24af94866e4562ca762bb04
+      size: 4227019
       isexec: true

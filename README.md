@@ -18,18 +18,21 @@ cd A1_EatingOut
 
 # 2) Ensure Git LFS pointers are pulled as real files
 # After pulling, the A1_EatingOut directory structure will look like below (file size is just indicative):
-# ├── [4.0K]  data
-# │   ├── [6.5M]  sydney.geojson
-# │   └── [2.6M]  zomato_df_final_data.csv
-# ├── [ 749]  dvc.lock
-# ├── [ 315]  dvc.yaml
-# ├── [4.0K]  notebooks
-# │   └── [3.6M]  A1.ipynb
+# ├── [   0]  artifacts
+# ├── [   0]  data
+# │   ├── [6.5M]  sydney.geojson
+# │   └── [2.6M]  zomato_df_final_data.csv
+# ├── [1.1K]  dvc.lock
+# ├── [ 552]  dvc.yaml
+# ├── [   0]  notebooks
+# │   └── [3.7M]  A1.ipynb
 # ├── [4.0K]  outputs
-# │   ├── [3.9M]  A1_executed.html
-# │   ├── [3.6M]  A1_executed.ipynb
-# │   └── [1.3M]  logr_model.pkl
-# └── [ 801]  README.md
+# │   ├── [4.0M]  A1_executed.html
+# │   ├── [3.7M]  A1_executed.ipynb
+# │   └── [1.3M]  logr_model.pkl
+# ├── [ 420]  push.err
+# └── [1.4K]  README.md
+
 git lfs install
 git lfs pull
 tree -sh
