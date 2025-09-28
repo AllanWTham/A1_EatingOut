@@ -1,0 +1,36 @@
+name: ds_spark
+channels:
+  - conda-forge
+dependencies:
+  # Core runtimes
+  - python=3.12
+  - openjdk=21
+  - jupyterlab>=4.2
+  - nodejs>=20
+
+  # Python data/ML stack
+  - pandas>=2.2
+  - numpy>=1.26
+  - matplotlib
+  - seaborn
+  - plotly
+  - scikit-learn
+
+  # Geo / extras requested earlier
+  - geopandas
+  - jupyterlab_execute_time
+  - papermill
+  - git-lfs
+  - ipykernel
+
+  # VCS + build
+  - git
+  - pip
+
+  # Pip-only deps
+  - pip:
+      - pyspark==4.0.0
+      - dvc[all]
+      - jupyterlab-git
+      - pre-commit
+      - nbstripout

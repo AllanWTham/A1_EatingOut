@@ -1,0 +1,18 @@
+stages:
+  run_notebook:
+    cmd: papermill notebooks/A1.ipynb outputs/A1_executed.ipynb -p DATA_CSV 
+      data/zomato_df_final_data.csv -p MODEL_OUT outputs/logr_model.pkl
+    deps:
+    - data/zomato_df_final_data.csv
+    - notebooks/A1.ipynb
+    outs:
+    - outputs/A1_executed.ipynb
+    - outputs/logr_model.pkl
+  export_html:
+    cmd: jupyter nbconvert --to html --output A1_executed.html --output-dir 
+      outputs outputs/A1_executed.ipynb
+    deps:
+    - outputs/A1_executed.ipynb
+    outs:
+    - outputs/A1_executed.html:
+        cache: false

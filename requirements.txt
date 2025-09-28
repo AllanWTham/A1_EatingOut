@@ -1,0 +1,6 @@
+# requirements.txt — pip-only deps (used by environment.yaml)
+pyspark==4.0.0
+dvc[all]
+jupyterlab-git
+pre-commit
+nbstripout
